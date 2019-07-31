@@ -1,0 +1,24 @@
+{
+  "name": "@vechain/connex.driver",
+  "version": "1.0.0-beta-9",
+  "description": "Connex Driver interface",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qianbin/connex.driver.git"
+  },
+  "author": "qianbin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qianbin/connex.driver/issues"
+  },
+  "homepage": "https://github.com/qianbin/connex.driver#readme",
+  "peerDependencies": {
+    "@vechain/connex": "^1.3.2"
+  },
+  "devDependencies": {
+    "@vechain/connex": "^1.3.2"
+  }
+}
