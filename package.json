@@ -1,6 +1,6 @@
 {
   "name": "@vechain/connex.driver",
-  "version": "1.0.0-beta-15",
+  "version": "1.0.0-beta-16",
   "description": "Connex Driver interface",
   "main": "index.js",
   "types": "index.d.ts",
