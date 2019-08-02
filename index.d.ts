@@ -25,7 +25,7 @@ declare namespace Connex {
         filterTransferLogs(arg: Driver.FilterTransferLogsArg): Promise<Thor.Transfer[]>
 
         // vendor methods
-        signTx(msg: Driver.SignTxArg, options: Driver.SignCertOption): Promise<Driver.SignTxResult>
+        signTx(msg: Driver.SignTxArg, options: Driver.SignTxOption): Promise<Driver.SignTxResult>
         signCert(msg: Driver.SignCertArg, option: Driver.SignCertOption): Promise<Driver.SignCertResult>
         isAddressOwned(addr: string): boolean
     }
