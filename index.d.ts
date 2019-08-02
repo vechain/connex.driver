@@ -25,7 +25,7 @@ declare namespace Connex {
         filterTransferLogs(arg: Driver.FilterTransferLogsArg): Promise<Thor.Transfer[]>
 
         // vendor methods
-        buildTx(msg: Driver.BuildTxArg, option: Driver.BuildTxOption): Promise<Driver.BuildTxResult>
+        signTx(msg: Driver.SignTxArg, options: Driver.SignCertOption): Promise<Driver.SignTxResult>
         signCert(msg: Driver.SignCertArg, option: Driver.SignCertOption): Promise<Driver.SignCertResult>
         isAddressOwned(addr: string): boolean
     }
@@ -62,28 +62,22 @@ declare namespace Connex {
             order: 'asc' | 'desc'
         }
 
-        type BuildTxArg = Array<{
+        type SignTxArg = Array<{
             to: string | null
             value: string
             data: string
             comment?: string
             abi?: object
         }>
-        type BuildTxOption = {
+        type SignTxOption = {
             signer?: string
             gas?: number
             dependsOn?: string
             link?: string
             comment?: string
+            delegationHandler?: Vendor.DelegationHandler
         }
-        type BuildTxResult = {
-            origin: string
-            raw: string // delegable raw tx, with vip-191 feature bit set
-            sign(delegation?: {
-                signature?: string
-                error?: Error
-            }): Promise<Vendor.TxResponse>
-        }
+        type SignTxResult = Vendor.TxResponse
 
         type SignCertArg = Vendor.CertMessage
         type SignCertOption = {
