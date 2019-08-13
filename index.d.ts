@@ -27,7 +27,7 @@ declare namespace Connex {
         // vendor methods
         signTx(msg: Driver.SignTxArg, options: Driver.SignTxOption): Promise<Driver.SignTxResult>
         signCert(msg: Driver.SignCertArg, option: Driver.SignCertOption): Promise<Driver.SignCertResult>
-        isAddressOwned(addr: string): boolean
+        isAddressOwned(addr: string): Promise<boolean>
     }
 
     namespace Driver {
